@@ -5,9 +5,25 @@ public class Human {
     public String position;
 
     public Human(int age, String name, String city, String position) {
-        this.age = age;
-        this.name = name;
-        this.city = city;
-        this.position = position;
+        if(age<0) {
+            this.age = 0;
+        } else {
+            this.age = age;
+        }
+        if (name==null) {
+            this.name = "Информация не указана";
+        } else {
+            this.name = name;
+        }
+        if (city==null) {
+            this.city = "Информация не указана";
+        } else {
+            this.city = city;
+        }
+        if (position==null) {
+            this.position = "Информация не указана";
+        } else {
+            this.position = position;
+        }
     }
 }
