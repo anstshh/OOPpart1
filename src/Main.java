@@ -1,26 +1,23 @@
 public class Main {
     public static void main(String[] args) {
 
-        Human maksim = new Human();
-        maksim.name = "Максим";
-        maksim.age = 35;
-        maksim.city = "Минск";
+        int currentYear = 2022;
 
-        Human anya = new Human();
-        anya.name = "Аня";
-        anya.age = 29;
-        anya.city = "Москва";
+        Human maksim = new Human(35, "Максим", "Минск", "Бренд-менеджер");
+        Human anya = new Human(29, "Аня", "Москва", "Методист образовательных программ");
+        Human katya = new Human(28, "Катя", "Калининград", "Продакт-менеджер");
+        Human artyom = new Human(27, "Артем", "Москва", "Директор по развитию бизнеса");
+        Human vladimir = new Human(21, "Владимир", "Казань", null);
 
-        Human katya = new Human();
-        katya.name = "Катя";
-        katya.age = 28;
-        katya.city = "Калининград";
+        printInfo(maksim);
+        printInfo(anya);
+        printInfo(katya);
+        printInfo(artyom);
+        printInfo(vladimir);
+    }
 
-        Human artyom = new Human();
-        artyom.name = "Катя";
-        artyom.age = 27;
-        artyom.city = "Москва";
+    private static void printInfo(Human human) {
+        System.out.println("Привет! Меня зовут "+human.name+". Я из города "+human.getCity()+". Я родился в  "+human.getAge()+" году. Я работаю на должности "+human.position+".Будем знакомы!");
 
-        System.out.println("Привет! Меня зовут …. Я из города …. Я родился в  … году. Я работаю на должности… . Будем знакомы!");
     }
 }
